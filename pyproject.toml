@@ -9,6 +9,7 @@ description = "An executable tool to automatically download videos and images fr
 readme = "README.md"
 requires-python = ">=3.11,<3.12"
 dependencies = [
+    "fire>=0.7.1",
     "pre-commit>=3.8.0",
     "pytest>=8.3.2",
     "ruff>=0.6.3",
