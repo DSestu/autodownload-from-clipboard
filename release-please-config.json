@@ -4,7 +4,7 @@
   "include-component-in-tag": false,
   "pull-request-title-pattern": "chore: release ${version}",
   "pull-request-header": "New release ! 🎉",
-  "bootstrap-sha": "7528343535cf7f31ff7e365597f755193bf29a9e",
+  "bootstrap-sha": "bf98ab580d725d3c25dfe981a90aa2aa72a92258",
   "changelog-sections": [
     {
       "type": "feat",
