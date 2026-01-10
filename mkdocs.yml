@@ -1,0 +1,96 @@
+site_name: AutoDownload from Clipboard
+site_url: https://dsestu.github.io/autodownload-from-clipboard/
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      baselevel: 1
+      toc_depth: 6
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+theme:
+  name: material
+  highlightjs: true
+  hljs_languages:
+    - python
+    - javascript
+    - html
+    - css
+    - json
+    - yaml
+    - bash
+    - shell
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.indexes
+    - navigation.instant
+    - navigation.tracking
+    - toc.integrate
+    - search.highlight
+    - search.share
+    - content.code.annotate
+    - content.code.copy
+    - content.code.select
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    # Dark mode (default)
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Light mode
+    - scheme: default
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+plugins:
+  - search
+  - blog
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [.]
+          options:
+            docstring_style: google
+            show_source: true
+            show_root_heading: true
+            show_root_toc_entry: true
+            show_root_full_path: true
+            show_object_full_path: true
+            show_category_heading: true
+            show_if_no_docstring: false
+            show_signature_annotations: true
+            separate_signature: true
+            line_length: 100
+            merge_init_into_class: true
+            show_submodules: true
+            heading_level: 2
+            show_root_heading: true
+            show_root_toc_entry: true
+            members_order: source
+            filters:
+              - "!^_"
+              - "^__init__$"
+              - "^__call__$"
+              - "^__str__$"
+              - "^__repr__$"
+            annotations_path: brief
+
+nav:
+  - Home: index.md
+  - Blog: blog/index.md
+  - API Reference:
+      - api/index.md
+      - root: api/root.md
+      - src: api/src.md
